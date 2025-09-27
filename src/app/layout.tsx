@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Navbar from "./navbar/page";
 
 export default function RootLayout({
   children,
@@ -14,8 +15,11 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="antialiased">
-        {children}
+      <body className="antialiased scroll-smooth md:scroll-auto">
+        <div className="flex">
+          <Navbar /> {/* Sidebar with h-screen */}
+          <main className="ml-15 w-screen">{children}</main>
+        </div>
       </body>
     </html>
   );
