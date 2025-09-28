@@ -72,7 +72,6 @@ export default function Home() {
                 typeSpeed={1}
                 showCursor={true}
                 cursorChar="|"
-                cursorBlinking={true}
               />
           </div>
           <div className="flex self-end -rotate-45 md:w-33 md:h-33 w-20 h-20 md:mt-0 mt-10 "><img className="rounded-2xl md:rounded-3xl justify-end"src="asset4.png"></img></div>
