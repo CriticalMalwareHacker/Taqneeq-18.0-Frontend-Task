@@ -1,8 +1,9 @@
+"use client";
 import Image from "next/image";
-
+import { ReactTyped } from "react-typed";
 export default function Home() {
   return (
-    <div className="flex flex-col gap-16 mr-20">
+    <div className="flex flex-col gap-16 md:mr-20 mb-10 mr-10">
       <div className="flex font-bold flex-row justify-end gap-4 mt-9">
             <button
               type="button"
@@ -56,25 +57,31 @@ export default function Home() {
                 </svg>
               </span>
             </button>
-        <button className="bg-[#222222] text-white p-4 rounded-full">Register Now!</button>
+        <button className="bg-[#222222] text-white p-4 rounded-full hover:p-4 transition ease-in-out duration-300 hover:text-[#222222] hover:bg-white border-1 hover:border-1 border-s md:text-base text-xs">Register Now!</button>
       </div>
       <div className=" flex flex-col gap-4">
         <div className="flex">
-          <h1 className="font-[PPMondwest] text-[6.25rem] text-[#222222]">Taqneeq 18.0 Is Back.</h1>
+          <h1 className="font-[PPMondwest] md:text-[6.25rem] text-[#222222] animate-pulse text-[4rem]">Taqneeq 18.0 Is Back.</h1>
         </div>
-        <div className="flex flex-row justify-between items-start">
-          <div className="flex justify-start max-w-6/12 text-sm leading-4">
-            <p>Taqneeq is where aspiring tech enthusiasts, developers, and visionaries
-              come together to compete, learn, and revolutionize the future. With a perfect
-              blend of competitions, workshops, hackathons, and exhibitions, this year’s
-              edition promises to be bigger and better than ever before.</p>
+        <div className="flex flex-col md:flex-row md:justify-between items-start">
+          <div className="flex justify-start md:max-w-6/12 text-sm leading-4">
+               <ReactTyped
+                strings={[
+                  "Taqneeq is where aspiring tech enthusiasts, developers, and visionaries come together to compete, learn, and revolutionize the future. With a perfect blend of competitions, workshops, hackathons, and exhibitions, this year's edition promises to be bigger and better than ever before."
+                ]}
+                typeSpeed={1}
+                showCursor={true}
+                cursorChar="|"
+                cursorBlinking={true}
+              />
           </div>
-          <div className="flex -rotate-45 w-33 h-33"><img className="rounded-3xl"src="asset4.png"></img></div>
+          <div className="flex self-end -rotate-45 md:w-33 md:h-33 w-20 h-20 md:mt-0 mt-10 "><img className="rounded-2xl md:rounded-3xl justify-end"src="asset4.png"></img></div>
           </div>
       </div>
       <div className="">
-        <img className="rounded-3xl" src="asset2.webp"></img>
+        <img className="rounded-3xl object-cover object-center h-125 w-full" src="asset2.webp"></img>
       </div>
+    
     </div>
   );
 }
